@@ -1,0 +1,24 @@
+.xyzabc-half-border::after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px rgb(85, 7, 45);
+    transform: scaleX(0.5);
+    transition: transform 250ms ease-in-out;
+}
+
+/* // from-center // */
+.xyzabc-half-border:hover::after {
+    transform: scaleX(1);
+}
+
+/* // from-right // */
+/* .xyzabc-half-border:hover::after {
+    transform-origin: 100% 50%;
+    transform: scaleX(1)
+} */
+
+/* // from-left // */
+/* .xyzabc-half-border.hover::after {
+    transform-origin: 0% 50%;
+    transform: scaleX(1)
+} */
