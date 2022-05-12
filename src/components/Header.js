@@ -18,7 +18,7 @@ const Header = () => {
             <button className='text-2xl font-black xyzabc-half-border' type='button'
                 onClick={() => { navigate('/login') }}
             >
-                Log In
+                Login
             </button>
 
         </nav>

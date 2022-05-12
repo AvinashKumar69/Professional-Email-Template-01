@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div className='h-96 rounded-b-3xl'
+        <div className='h-96 rounded-b-3xl text-white text-5xl font-black'
             style={{ background: 'linear-gradient(to right, #140e38, #194089)' }}
         >
             Home

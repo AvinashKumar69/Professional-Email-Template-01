@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import Login from './components/Login';
+import LoginPage from './pages/LoginPage';
 import Home from './pages/Home';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route exact path='/login' element={<Login />} />
+        <Route exact path='/login' element={<LoginPage />} />
         <Route exact path='/' element={<Home />} />
       </Routes>
     </>
