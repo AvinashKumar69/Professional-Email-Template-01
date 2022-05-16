@@ -1,21 +1,23 @@
-import { Alert, AlertDescription, AlertIcon, AlertTitle, Box, Button, FormControl, FormLabel, Input, InputGroup, InputRightElement } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import { EmailIcon } from '@chakra-ui/icons';
+import { Box, Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, useToast } from '@chakra-ui/react';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import React, { useContext, useState } from 'react';
+import { FaGoogle } from 'react-icons/fa';
+import { MdMarkEmailRead } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
-import { signInWithGoogle } from '../config/firebase-config';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from '../config/firebase-config';
-import { useToast } from '@chakra-ui/react'
+import { auth, provider } from '../config/firebase-config';
+import { AuthContext } from '../context/AuthContext';
 
 
 const Login = () => {
+
+    const { dispatch } = useContext(AuthContext)
 
     const [show, setShow] = useState(false)
     const handleClickShowPassword = () => setShow(!show)
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
     const toast = useToast()
-    const [loginError, setLoginError] = useState(false)
-
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
@@ -25,30 +27,8 @@ const Login = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
-                console.log('user-->', user);
-
-                toast({
-                    title: 'Account created!',
-                    description: "Your Account has been Created Successfully!!",
-                    status: 'success',
-                    duration: 5000,
-                    isClosable: true,
-                })
-
-                navigate('/')
-            })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-            });
-    }
-
-    const handleLogin = () => {
-
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log('user-->', user);
+                console.log('user of createUserWithEmailAndPassword-->', user);
+                dispatch({ type: 'LOGIN', payload: user })
 
                 toast({
                     title: 'Account created!',
@@ -64,19 +44,91 @@ const Login = () => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 console.log(errorMessage, errorCode);
-                return (alert(
-                    <Alert status='error'>
-                    <AlertIcon />
-                    <AlertTitle>Error!</AlertTitle>
-                    <AlertDescription>Email/ Password Mismatch.</AlertDescription>
-                </Alert>
-                ))
+                alert('Error while Creating Account, Please Try Again!')
+            });
+    }
+
+    const handleLogin = () => {
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                const user = userCredential.user;
+                console.log('user of signInWithEmailAndPassword-->', user);
+                dispatch({ type: 'LOGIN', payload: user })
+
+                toast({
+                    title: 'SignIn Successfull!',
+                    description: "Your SignIn with Email & Password is Successfull!!",
+                    status: 'success',
+                    duration: 5000,
+                    isClosable: true,
+                })
+
+                navigate('/')
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorMessage, errorCode);
+
+                toast({
+                    title: 'Error!',
+                    description: "Email Id/ Password Mismatched, Please Try Again!!",
+                    status: 'error',
+                    duration: 5000,
+                    isClosable: true,
+                })
+            });
+    }
+
+    const handleGoogleLogin = () => {
+
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                // This gives you a Google Access Token. You can use it to access the Google API.
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const token = credential.accessToken;
+                // The signed-in user info.
+                const user = result.user;
+                // ...
+                console.log('user of loginWithGoogle-->', user);
+                dispatch({ type: 'LOGIN', payload: user })
+
+                toast({
+                    title: 'LoggedIn!',
+                    description: "Your Successfully Loggedin via Google!!",
+                    status: 'success',
+                    duration: 5000,
+                    isClosable: true,
+                })
+
+                navigate('/')
+
+            })
+            .catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
+                console.log(errorMessage, email, credential, errorCode);
+
+                toast({
+                    title: 'Error, Something Went Wrong!',
+                    description: "Please Try Again!!",
+                    status: 'error',
+                    duration: 5000,
+                    isClosable: true,
+                })
             });
     }
 
 
     return (
-        <Box className='flex flex-col items-center justify-center mx-auto m-5 p-5 w-96'
+        <Box className='flex flex-col items-center justify-center mx-auto m-5 p-5 w-96 shadow-xl rounded-full'
             borderWidth='1px' borderRadius='lg' overflow='hidden'>
 
             <FormControl id='email' isRequired>
@@ -113,8 +165,9 @@ const Login = () => {
                 style={{ marginTop: 15 }}
                 onClick={handleSignup}
                 isLoading={loading}
+                leftIcon={<MdMarkEmailRead style={{ height: '30px', width: '30px' }} />}
             >
-                Create Account / SignUp
+                <span className='font-bold'>SignUp with Email & Password</span>
             </Button>
 
             <Button
@@ -123,24 +176,21 @@ const Login = () => {
                 style={{ marginTop: 15 }}
                 onClick={handleLogin}
                 isLoading={loading}
+                leftIcon={<EmailIcon w={7} h={7} />}
             >
-                Login with Email & Password
+                <span className='font-bold'>Login with Email & Password</span>
             </Button>
 
-            {/* <Alert status='error' className='mt-2 rounded-lg'>
-                <AlertIcon />
-                <AlertTitle>Error!</AlertTitle>
-                <AlertDescription>Email/ Password Mismatch.</AlertDescription>
-            </Alert> */}
+            <h1 className='font-bold text-black text-xl'>OR</h1>
 
-            <Button
-                colorScheme='red'
+            <Button colorScheme='red'
+                leftIcon={<FaGoogle style={{ height: '30px', width: '30px' }} />}
                 width='100%'
                 style={{ marginTop: 15 }}
-                onClick={() => signInWithGoogle()}
+                onClick={handleGoogleLogin}
                 isLoading={loading}
             >
-                Login with Google
+                <span className='font-bold'>Login with Google</span>
             </Button>
 
         </Box>
