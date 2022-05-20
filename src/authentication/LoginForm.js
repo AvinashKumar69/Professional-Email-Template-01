@@ -2,8 +2,6 @@ import { EmailIcon } from '@chakra-ui/icons';
 import { Box, Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, useToast } from '@chakra-ui/react';
 import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import React, { useContext, useState } from 'react';
-import { FaGoogle } from 'react-icons/fa';
-import { MdMarkEmailRead } from 'react-icons/md';
 import { useNavigate } from 'react-router-dom';
 import { auth, provider } from '../config/firebase-config';
 import { AuthContext } from '../context/AuthContext';
@@ -165,7 +163,6 @@ const Login = () => {
                 style={{ marginTop: 15 }}
                 onClick={handleSignup}
                 isLoading={loading}
-                leftIcon={<MdMarkEmailRead style={{ height: '30px', width: '30px' }} />}
             >
                 <span className='font-bold'>SignUp with Email & Password</span>
             </Button>
@@ -184,7 +181,6 @@ const Login = () => {
             <h1 className='font-bold text-black text-xl'>OR</h1>
 
             <Button colorScheme='red'
-                leftIcon={<FaGoogle style={{ height: '30px', width: '30px' }} />}
                 width='100%'
                 style={{ marginTop: 15 }}
                 onClick={handleGoogleLogin}

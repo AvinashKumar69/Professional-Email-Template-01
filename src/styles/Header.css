@@ -1,8 +1,8 @@
 .xyzabc-half-border::after {
     display: block;
     content: '';
-    border-bottom: solid 3px rgb(85, 7, 45);
-    transform: scaleX(0.5);
+    border-bottom: solid 3px rgb(232, 44, 6);
+    transform: scaleX(0);
     transition: transform 250ms ease-in-out;
 }
 
