@@ -8,7 +8,6 @@ import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import Home from './pages/Home';
 import LandingPage from './pages/LandingPage';
-import LoginPage from './pages/LoginPage';
 import OurServices from './pages/OurServices';
 
 function App() {
@@ -27,17 +26,17 @@ function App() {
       <Header currentUser={currentUser} />
       <Routes>
         <Route exact path='/' element={<LandingPage currentUser={currentUser} />} />
-        {/* <Route exact path='/login' element={<LoginPage />} /> */}
-        <Route exact path='/home' element={
+        {/* <Route exact path='/home' element={
           <RequireAuth>
             <Home />
           </RequireAuth>
-        } />
+        } /> */}
+        <Route exact path='/home' element={<Home />} />
         <Route exact path='/aboutus' element={<AboutUs />} />
         <Route exact path='/contactus' element={<ContactUs />} />
         <Route exact path='/ourservices' element={<OurServices />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

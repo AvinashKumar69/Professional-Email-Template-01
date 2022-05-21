@@ -88,7 +88,7 @@ const Header = (props) => {
 
 
     return (
-        <nav className='flex flex-row items-center justify-between px-20 h-16 text-black bg-gray-100 font-mono tracking-widest'
+        <nav className='flex flex-row items-center justify-between px-20 h-16 text-black bg-white font-mono tracking-widest'
         // style={{ background: 'linear-gradient(to right, #140e38, #194089)' }}
         // style={{ backgroundColor: '#4646ec' }}
         >
@@ -104,17 +104,17 @@ const Header = (props) => {
                     <Link to='/home' className='font-medium text-xl xyzabc-half-border'>
                         Home
                     </Link>
-                    <Link to='/aboutus' className='font-medium text-xl xyzabc-half-border'>
+                    {/* <Link to='/aboutus' className='font-medium text-xl xyzabc-half-border'>
                         AboutUs
-                    </Link>
+                    </Link> */}
                     <Link to='/contactus' className='font-medium text-xl xyzabc-half-border'>
                         ContactUs
                     </Link>
-                    <Link to='/ourservices' className='font-medium text-xl xyzabc-half-border'>
+                    {/* <Link to='/ourservices' className='font-medium text-xl xyzabc-half-border'>
                         Services
-                    </Link>
+                    </Link> */}
 
-                    <img className='h-12 w-12 rounded-full' src={currentUser.photoURL} alt='profile' />
+                    {/* <img className='h-12 w-12 rounded-full' src={currentUser.photoURL} alt='profile' /> */}
                     <h1 className='xyzabc-half-border font-medium text-xl'>
                         {currentUser.displayName}!
                     </h1>
@@ -134,15 +134,18 @@ const Header = (props) => {
                 :
 
                 <div className='flex flex-row items-center justify-center space-x-6'>
-                    <Link to='/aboutus' className='font-medium text-xl xyzabc-half-border'>
-                        AboutUs
+                    <Link to='/home' className='font-medium text-xl xyzabc-half-border'>
+                        Home
                     </Link>
+                    {/* <Link to='/aboutus' className='font-medium text-xl xyzabc-half-border'>
+                        AboutUs
+                    </Link> */}
                     <Link to='/contactus' className='font-medium text-xl xyzabc-half-border'>
                         ContactUs
                     </Link>
-                    <Link to='/ourservices' className='font-medium text-xl xyzabc-half-border'>
+                    {/* <Link to='/ourservices' className='font-medium text-xl xyzabc-half-border'>
                         Services
-                    </Link>
+                    </Link> */}
                     <Link to='/home' className=''>
                         <Button className='' type='button'
                             colorScheme='red'
