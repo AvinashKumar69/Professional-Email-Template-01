@@ -88,9 +88,10 @@ const Header = (props) => {
 
 
     return (
-        <nav className='flex flex-row items-center justify-between px-20 h-16 text-black bg-white font-mono tracking-widest'
-        // style={{ background: 'linear-gradient(to right, #140e38, #194089)' }}
-        // style={{ backgroundColor: '#4646ec' }}
+        <nav className='flex flex-row items-center justify-between px-20 h-16 text-white font-mono tracking-widest'
+            // style={{ background: 'linear-gradient(to right, #140e38, #194089)' }}
+            // style={{ backgroundColor: '#4646ec' }}
+            style={{ backgroundColor: '#434750' }}
         >
             <Link to='/' className='xyzabc-half-border'>
                 <div className='flex flex-col items-center justify-center'>

@@ -4,6 +4,12 @@ import './App.css';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { AuthContext } from './context/AuthContext';
+import CoverLetter from './EmailOutputPages/CoverLetter';
+import EmergencyLeave from './EmailOutputPages/EmergencyLeave';
+import ForcedResignationLetter from './EmailOutputPages/ForcedResignationLetter';
+import JobApplication from './EmailOutputPages/JobApplication';
+import ResignationLetter from './EmailOutputPages/ResignationLetter';
+import SickLeave from './EmailOutputPages/SickLeave';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import Home from './pages/Home';
@@ -35,6 +41,12 @@ function App() {
         <Route exact path='/aboutus' element={<AboutUs />} />
         <Route exact path='/contactus' element={<ContactUs />} />
         <Route exact path='/ourservices' element={<OurServices />} />
+        <Route exact path='/sickleave' element={<SickLeave />} />
+        <Route exact path='/emergencyleave' element={<EmergencyLeave />} />
+        <Route exact path='/resignationletter' element={<ResignationLetter />} />
+        <Route exact path='/forcedresignationletter' element={<ForcedResignationLetter />} />
+        <Route exact path='/jobapplication' element={<JobApplication />} />
+        <Route exact path='/coverletter' element={<CoverLetter />} />
       </Routes>
       <Footer />
     </>
