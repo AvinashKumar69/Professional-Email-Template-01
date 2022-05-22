@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
+import NewLoginForm from './authentication/NewLoginForm';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { AuthContext } from './context/AuthContext';
@@ -21,7 +22,7 @@ function App() {
   const { currentUser } = useContext(AuthContext)
 
   const RequireAuth = ({ children }) => {
-    return currentUser ? children : <Navigate to='/' />
+    return currentUser ? children : <Navigate to='/newloginform' />
   }
 
   console.log('currentUser at App.js-->', currentUser);
@@ -37,9 +38,14 @@ function App() {
             <Home />
           </RequireAuth>
         } /> */}
+        <Route exact path='/newloginform' element={<NewLoginForm />} />
         <Route exact path='/home' element={<Home />} />
         <Route exact path='/aboutus' element={<AboutUs />} />
-        <Route exact path='/contactus' element={<ContactUs />} />
+        <Route exact path='/contactus' element={
+          <RequireAuth>
+            <ContactUs />
+          </RequireAuth>
+        } />
         <Route exact path='/ourservices' element={<OurServices />} />
         <Route exact path='/sickleave' element={<SickLeave />} />
         <Route exact path='/emergencyleave' element={<EmergencyLeave />} />
