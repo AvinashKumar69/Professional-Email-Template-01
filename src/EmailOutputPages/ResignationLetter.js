@@ -4,7 +4,7 @@ const ResignationLetter = () => {
     return (
         <div className='space-y-6 py-5'>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>1. Simple resignation letter example</h1>
                 <p className=''>
                     Dear [Name of your Manager or Supervisor or HR],
@@ -21,7 +21,7 @@ const ResignationLetter = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>2. Professional resignation example</h1>
                 <p className=''>
                     Dear [Name of your Manager or Supervisor or HR],
@@ -40,7 +40,7 @@ const ResignationLetter = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>3. Two weeks' notice resignation letter example</h1>
                 <p className=''>
                     Dear [Name of your Manager or Supervisor or HR],
@@ -57,7 +57,7 @@ const ResignationLetter = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>4. 24-hour notice letter of resignation example</h1>
                 <p className=''>
                     Dear [Name of your Manager or Supervisor or HR],
@@ -74,7 +74,7 @@ const ResignationLetter = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>5. Immediate resignation letter example</h1>
                 <p className=''>
                     Dear [Name of your Manager or Supervisor or HR],
@@ -91,7 +91,7 @@ const ResignationLetter = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>6. Immediate Resignation Letter Template</h1>
                 <p className=''>
                     Dear [Name of your Manager or Supervisor or HR],
@@ -108,7 +108,7 @@ const ResignationLetter = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>7. Leaving for personal reasons</h1>
                 <p className=''>
                     Dear [Name of your Manager or Supervisor or HR],
@@ -127,7 +127,7 @@ const ResignationLetter = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>8. Leaving due to illness</h1>
                 <p className=''>
                     Dear [Name of your Manager or Supervisor or HR],
@@ -144,7 +144,7 @@ const ResignationLetter = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>9. Leaving due to new job</h1>
                 <p className=''>
                     Dear [Name of your Manager or Supervisor or HR],

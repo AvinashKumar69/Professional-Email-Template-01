@@ -39,7 +39,7 @@ const Header = (props) => {
                     isClosable: true,
                 })
 
-                navigate('/home')
+                navigate('/')
 
             })
             .catch((error) => {
@@ -88,23 +88,21 @@ const Header = (props) => {
 
 
     return (
-        <nav className='flex flex-row items-center justify-between px-20 h-16 text-white font-mono tracking-widest'
+        <nav className='flex flex-row items-center justify-between px-20 h-16 text-white font-mono tracking-widest xs:tracking-tighter xs:flex-row xs:px-2'
             // style={{ background: 'linear-gradient(to right, #140e38, #194089)' }}
             // style={{ backgroundColor: '#4646ec' }}
             style={{ backgroundColor: '#434750' }}
         >
             <Link to='/' className='xyzabc-half-border'>
-                <div className='flex flex-col items-center justify-center'>
-                    <h1 className='text-3xl font-black'>EasyEmails</h1>
-                </div>
+                <h1 className='text-3xl font-black xs:text-xl'>EasyEmails</h1>
             </Link>
 
             {currentUser !== null ?
 
-                <div className='flex flex-row items-center justify-center space-x-6'>
-                    <Link to='/home' className='font-medium text-xl xyzabc-half-border'>
+                <div className='flex flex-row items-center justify-center space-x-6 xs:space-x-2'>
+                    {/* <Link to='/home' className='font-medium text-xl xyzabc-half-border'>
                         Home
-                    </Link>
+                    </Link> */}
                     {/* <Link to='/aboutus' className='font-medium text-xl xyzabc-half-border'>
                         AboutUs
                     </Link> */}
@@ -127,17 +125,17 @@ const Header = (props) => {
                             onClick={handleLogOut}
                         // isLoading={loading}
                         >
-                            <span className='font-bold'>Logout</span>
+                            <span className='font-bold text-xl xs:text-base'>Logout</span>
                         </Button>
                     </Link>
                 </div>
 
                 :
 
-                <div className='flex flex-row items-center justify-center space-x-6'>
-                    <Link to='/home' className='font-medium text-xl xyzabc-half-border'>
+                <div className='flex flex-row items-center justify-center space-x-6 xs:space-x-2'>
+                    {/* <Link to='/home' className='font-medium text-xl xyzabc-half-border'>
                         Home
-                    </Link>
+                    </Link> */}
                     {/* <Link to='/aboutus' className='font-medium text-xl xyzabc-half-border'>
                         AboutUs
                     </Link> */}
@@ -154,7 +152,7 @@ const Header = (props) => {
                             onClick={handleGoogleLogin}
                         // isLoading={loading}
                         >
-                            <span className='font-bold text-xl'>Login</span>
+                            <span className='font-bold text-xl xs:text-base'>Login</span>
                         </Button>
                     </Link>
                 </div>

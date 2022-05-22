@@ -10,11 +10,11 @@ const CoverLetter = () => {
     return (
         <div className='space-y-6 py-5'>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full'>
                 <img className='object-cover' src={CoverLetterImg1} alt='img1' />
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5'>
                 <h1 className='text-2xl font-bold mb-5 border-2 border-green-500 rounded-lg p-2'>Cover Letter Writing Checklist</h1>
                 <div className='border-2 border-green-500 rounded-lg p-2'>
                     <h1 className='text-xl font-semibold mb-2'>Does your cover letter heading include all essential information?</h1>
@@ -58,50 +58,50 @@ const CoverLetter = () => {
                 </div>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5'>
                 <h1 className='text-2xl font-bold mb-5'>5+ Cover Letter Examples</h1>
                 <p className=''>
                     Need some inspiration? Read on to learn about some of the best cover letter examples we've seen (for different fields).
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5'>
                 <h1 className='text-2xl font-bold mb-5'>1. College Student Cover Letter Example</h1>
             </div>
 
-            <div className='w-3/5 mx-auto border-2 border-black rounded-lg'>
+            <div className='w-3/5 mx-auto border-2 border-black rounded-lg xs:w-full xs:px-5'>
                 <img className='object-cover' src={Example1} alt='1' />
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5'>
                 <h1 className='text-2xl font-bold mb-5'>2. Middle Management Cover Letter Example</h1>
             </div>
 
-            <div className='w-3/5 mx-auto border-2 border-black rounded-lg'>
+            <div className='w-3/5 mx-auto border-2 border-black rounded-lg xs:w-full xs:px-5'>
                 <img className='object-cover' src={Example2} alt='2' />
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5'>
                 <h1 className='text-2xl font-bold mb-5'>3. Career Change Cover Letter Example</h1>
             </div>
 
-            <div className='w-3/5 mx-auto border-2 border-black rounded-lg'>
+            <div className='w-3/5 mx-auto border-2 border-black rounded-lg xs:w-full xs:px-5'>
                 <img className='object-cover' src={Example3} alt='2' />
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5'>
                 <h1 className='text-2xl font-bold mb-5'>4. Management Cover Letter Example</h1>
             </div>
 
-            <div className='w-3/5 mx-auto border-2 border-black rounded-lg'>
+            <div className='w-3/5 mx-auto border-2 border-black rounded-lg xs:w-full xs:px-5'>
                 <img className='object-cover' src={Example4} alt='2' />
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5'>
                 <h1 className='text-2xl font-bold mb-5'>5. Senior Executive Cover Letter Example</h1>
             </div>
 
-            <div className='w-3/5 mx-auto border-2 border-black rounded-lg'>
+            <div className='w-3/5 mx-auto border-2 border-black rounded-lg xs:w-full xs:px-5'>
                 <img className='object-cover' src={Example5} alt='2' />
             </div>
 

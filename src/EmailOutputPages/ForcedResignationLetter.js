@@ -4,18 +4,18 @@ const ForcedResignationLetter = () => {
     return (
         <div className='space-y-6 py-5'>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto border-2 xs:w-full xs:px-5 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>What is a Forced Resignation Letter?</h1>
                 <p className=''>
                     A forced resignation letter is an official document stating that you are leaving the company. This document explains why the company forced you to resign and is a chance for you to share your point of view. A forced resignation letter should be professional and cordial despite the circumstances.
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto border-2 xs:w-full xs:px-5 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>1. Forced resignation due to a specific event</h1>
                 <p className=''>
                     Hi [Name of your Manager or Supervisor]
-                    <be /><br />
+                    <br /><br />
                     I regret to submit my resignation from my position as [Your Designation] at [Your Company Name]. <span className='font-bold'>My last day of employment will be [Month Date, Year]</span>.
                     <br /><br />
                     Due to the unforeseen backlash of last quarter's marketing campaign, management recommended that I resign from my position at the company. I am disappointed by the outcome of events, but I understand that [Your Company Name] is looking to reform its marketing efforts going forward.
@@ -32,11 +32,11 @@ const ForcedResignationLetter = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto border-2 xs:w-full xs:px-5 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>2. Forced resignation due to budget cuts</h1>
                 <p className=''>
                     Hi [Name of your Manager or Supervisor]
-                    <be /><br />
+                    <br /><br />
                     It is to my dissatisfaction that I submit my resignation from my position as [Your Designation] at [Your Company Name]. <span className='font-bold'>My decision to end my employment will be effective immediately</span>.
                     <br /><br />
                     I loved my time at [Your Company Name], but because of budget cuts, the Management can no longer afford my salary. I wish we could have worked out an agreement that allowed me to grow in my career, but it appears that circumstances will not allow it. I am forced to resign from this position and will look for new employment elsewhere.

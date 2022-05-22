@@ -66,15 +66,15 @@ const LandingPage = (props) => {
 
     return (
         <>
-            <div className='flex flex-row'
+            <div className='flex flex-row xs:flex-col'
                 style={{ background: '#434750' }}
             >
                 <SideBar />
-                <div className='flex flex-col items-start justify-center mx-auto'>
-                    <h1 className='text-3xl tracking-widest uppercase text-left font-black font-mono mb-5'>
+                <div className='flex flex-col items-start justify-center mx-auto xs:p-5 text-gray-400 font-serif w-1/2 xs:w-full'>
+                    <h1 className='text-3xl xs:text-2xl tracking-widest uppercase text-left font-black mb-5'>
                         The professional email templates helping folks<br /> write the formal emails.
                     </h1>
-                    <p className='text-xl text-left font-black font-mono'>
+                    <p className='text-xl xs:text-lg text-left font-black font-sarif'>
                        We offer Ready-to-Use email-samples for the different situations as per the user's requirement.
                        <br/>
                        Just select the type of emails from the left-sidebar and explore our rich samples curated by the industry experts. 

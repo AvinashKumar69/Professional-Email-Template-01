@@ -4,8 +4,8 @@ const SickLeave = () => {
     return (
         <div className='space-y-6 py-5'>
 
-            <div className='w-3/5 mx-auto'>
-                <h1 className='text-2xl font-bold mb-5'>Sample Sick Day Email - Basic</h1>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
+                <h1 className='text-2xl font-bold mb-5'>1. Sample Sick Day Email - Basic</h1>
                 <p className=''>
                     Hi [Name of your Manager or Supervisor],
                     <br /><br />
@@ -17,8 +17,8 @@ const SickLeave = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
-                <h1 className='text-2xl font-bold mb-5'>Sample Sick Day Email with Paid Leave Request</h1>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
+                <h1 className='text-2xl font-bold mb-5'>2. Sample Sick Day Email with Paid Leave Request</h1>
                 <p className=''>
                     Hi [Name of your Manager or Supervisor],
                     <br /><br />
@@ -32,8 +32,8 @@ const SickLeave = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
-                <h1 className='text-2xl font-bold mb-5'>Sample Sick Email Template for Indefinite Leave</h1>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
+                <h1 className='text-2xl font-bold mb-5'>3. Sample Sick Email Template for Indefinite Leave</h1>
                 <p className=''>
                     Hi [Name of your Manager or Supervisor],
                     <br /><br />

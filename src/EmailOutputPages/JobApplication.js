@@ -4,7 +4,7 @@ const JobApplication = () => {
     return (
         <div className='space-y-6 py-5'>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>Things you should include in your job application email</h1>
                 <p className='text-xl mb-2'>
                     You can make a good impression on the hiring manager by including the following things in your job application email:
@@ -26,7 +26,7 @@ const JobApplication = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>Template for a Job Application Email</h1>
                 <p className=''>
                     *<span className='font-bold'>Subject:</span> Your name - Application for [Job title]*
@@ -45,7 +45,7 @@ const JobApplication = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>Example 1: Job application email by a recent graduate</h1>
                 <p className=''>
                     <span className='font-bold'>*Subject: </span>[Your Name] - Application for [Position for which you are Applying, i.e., React Js Developer]*
@@ -72,7 +72,7 @@ const JobApplication = () => {
                 </p>
             </div>
 
-            <div className='w-3/5 mx-auto'>
+            <div className='w-3/5 mx-auto xs:w-full xs:px-5 border-2 border-gray-300 rounded-lg p-2 shadow-xl'>
                 <h1 className='text-2xl font-bold mb-5'>Example 2: Job application email by an experienced professional</h1>
                 <p className=''>
                     <span className='font-bold'>*Subject: </span>[Your Name] - Application for [Position for which you are Applying, i.e., Senior React Js Developer]*
