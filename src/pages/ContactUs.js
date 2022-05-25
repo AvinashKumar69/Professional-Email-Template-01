@@ -12,16 +12,7 @@ const ContactUs = () => {
 
         emailjs.sendForm('service_2epned2', 'template_46wdqow', form.current, 'ivLw-nnOrWGcfAsTS')
             .then((result) => {
-                console.log(result.text);
-
-                toast({
-                    title: 'Message Sent Successfully!',
-                    description: "We Have Received Your Message And Will Respond As Soon As Possible!!",
-                    status: 'success',
-                    duration: 5000,
-                    isClosable: true,
-                })
-
+                console.log(result.text)
             }, (error) => {
                 console.log(error.text);
             });
