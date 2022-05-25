@@ -1,52 +1,63 @@
-// import React, { useRef } from 'react';
-// import emailjs from 'emailjs';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { toast, useToast } from '@chakra-ui/react';
 
-// const ContactUs = () => {
+const ContactUs = () => {
 
-//     const form = useRef();
+    const form = useRef();
+    const toast = useToast()
 
-//     const sendEmail = (e) => {
-//         e.preventDefault();
+    const sendEmail = (e) => {
+        e.preventDefault();
 
-//         emailjs.sendForm('service_2epned2', 'template_46wdqow', form.current, 'ivLw-nnOrWGcfAsTS')
-//             .then((result) => {
-//                 console.log(result.text);
-//             }, (error) => {
-//                 console.log(error.text);
-//             });
-//         form.current.reset()
-//     };
+        emailjs.sendForm('service_2epned2', 'template_46wdqow', form.current, 'ivLw-nnOrWGcfAsTS')
+            .then((result) => {
+                console.log(result.text);
 
-//     return (
-//         <div className='h-screen'
-//             style={{ background: '#434750' }}
-//             ref={form} onSubmit={sendEmail}
-//         >
-//             <div className='w-1/2 bg-white border-2 border-gray-300 sm:w-2/3 xs:w-full mx-auto'>
-//                 <form className=''>
-//                     <div className=''>
-//                         <label className=''>Name</label>
-//                         <input className='' name='name' type='text' placeholder='Enter Your Name' required />
-//                     </div>
-//                     <div className=''>
-//                         <label className=''>Phone Number</label>
-//                         <input className='' name='number' type='tel' placeholder='Enter Your Phone Number' required />
-//                     </div>
-//                     <div className=''>
-//                         <label className=''>Email Id</label>
-//                         <input className='' name='email' type='email' placeholder='Enter Your Email Id' required />
-//                     </div>
-//                     <div className=''>
-//                         <label className=''>Email Id</label>
-//                         <textarea className='' name='message' type='message' placeholder='Enter Your Message/ Feedback' rows='3' required />
-//                     </div>
-//                     <button type='submit' className=''>
-//                         Submit
-//                     </button>
-//                 </form>
-//             </div>
-//         </div>
-//     )
-// }
+                toast({
+                    title: 'Message Sent Successfully!',
+                    description: "We Have Received Your Message And Will Respond As Soon As Possible!!",
+                    status: 'success',
+                    duration: 5000,
+                    isClosable: true,
+                })
 
-// export default ContactUs;
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
+
+    return (
+        <div className='h-screen'
+            style={{ background: '#434750' }}
+        >
+            <div className='w-96 bg-white border-2 border-gray-300 rounded-3xl p-5 sm:w-96 xs:w-full mx-auto'>
+                <form className='flex flex-col items-center justify-center'
+                    ref={form} onSubmit={sendEmail}
+                >
+                    <div className='flex flex-col items-start justify-center'>
+                        <label className='text-gray-500 font-bold'>Name</label>
+                        <input className='rounded-lg border-2 border-gray-300 w-80 p-2' name='name' type='text' placeholder='Enter Your Name' required />
+                    </div>
+                    <div className='flex flex-col items-start justify-center'>
+                        <label className='text-gray-500 font-bold'>Phone Number</label>
+                        <input className='rounded-lg border-2 border-gray-300 w-80 p-2' name='number' type='tel' placeholder='Enter Your Phone Number' required />
+                    </div>
+                    <div className='flex flex-col items-start justify-center'>
+                        <label className='text-gray-500 font-bold'>Email Id</label>
+                        <input className='rounded-lg border-2 border-gray-300 w-80 p-2' name='email' type='email' placeholder='Enter Your Email Id' required />
+                    </div>
+                    <div className='flex flex-col items-start justify-center'>
+                        <label className='text-gray-500 font-bold'>Message</label>
+                        <textarea className='rounded-lg border-2 border-gray-300 w-80 p-2' name='message' type='message' placeholder='Enter Your Message/ Feedback' rows='3' required />
+                    </div>
+                    <button type='submit' className='border-2 border-gray-900 p-2 rounded-lg font-bold mt-2 bg-blue-400 text-white font-serif'>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    )
+}
+
+export default ContactUs;
