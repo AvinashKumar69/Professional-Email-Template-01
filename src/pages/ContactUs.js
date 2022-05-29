@@ -8,11 +8,20 @@ const ContactUs = () => {
     const toast = useToast()
 
     const sendEmail = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
 
         emailjs.sendForm('service_2epned2', 'template_46wdqow', form.current, 'ivLw-nnOrWGcfAsTS')
             .then((result) => {
                 console.log(result.text)
+
+                toast({
+                    title: 'Message Sent!',
+                    description: "Your Message Was Sent Successfully!",
+                    status: 'success',
+                    duration: 5000,
+                    isClosable: true,
+                })
+
             }, (error) => {
                 console.log(error.text);
             });
